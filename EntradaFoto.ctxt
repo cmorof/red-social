@@ -1,8 +1,16 @@
 #BlueJ class context
-comment0.params=
-comment0.target=EntradaFoto()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ EntradaFoto\r\n
-comment1.params=y
-comment1.target=int\ sampleMethod(int)
-comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=2
+comment0.params=usuario\ url\ titulo
+comment0.target=EntradaFoto(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.params=
+comment1.target=void\ meGusta()
+comment2.params=texto
+comment2.target=void\ addComentario(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getUrlImagen()
+comment4.params=
+comment4.target=java.lang.String\ getTituloDeLaImagen()
+comment5.params=
+comment5.target=java.time.LocalDateTime\ getMomentoPublicacion()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7
