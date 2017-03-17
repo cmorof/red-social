@@ -25,4 +25,9 @@ public class Muro
         
         return cadenaADevolver;
     }
+    
+    public void mostrar()
+    {
+        System.out.println(this);
+    }
 }
