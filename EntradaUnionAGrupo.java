@@ -1,27 +1,24 @@
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
-public class EntradaTexto extends EntradaComentarios
+public class EntradaUnionAGrupo extends Entrada
 {
-    private String mensaje;
-    
-    public EntradaTexto(String texto, String autor)
+    private String grupo;
+
+    public EntradaUnionAGrupo(String usuario, String grupo)
     {
-        super(autor);
-        mensaje = texto;
-    }
-    
-    public String getMensaje()
-    {
-        return mensaje;
+        super(usuario);
+        this.grupo = grupo;
     }
     
     public String toString()
     {
         String textoADevolver = null;
         
-        textoADevolver += "Usuario: " + getUsuario() + "\n";
-        textoADevolver += mensaje + "\n";
+        textoADevolver += "El usuario: " + getUsuario();
+        textoADevolver += "se ha unido al grupo " + grupo + "\n";
+        
+        
         textoADevolver += getcantidadMeGusta() + "me gusta";
 
         long segundosQueHanPasadoDesdeCreacion = getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
@@ -35,23 +32,10 @@ public class EntradaTexto extends EntradaComentarios
         }
         textoADevolver += segundosResiduales + "segundos.\n";
         
-        if (getComentarios().isEmpty())
-        {
-            textoADevolver += "La entrada no tiene comentarios";
-        }
-        else
-        {
-            textoADevolver += "Comentarios:\n";
-            for (String comentario : getComentarios())
-            {
-                textoADevolver += comentario + "\n";
-            }
-        }
-        
         return textoADevolver;
     }
     
-        public void mostrar()
+    public void mostrar()
     {
     
     }

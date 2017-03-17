@@ -2,35 +2,23 @@ import java.util.ArrayList;
 
 public class Muro
 {
-    private ArrayList<EntradaTexto> mensajes;
-    private ArrayList<EntradaFoto> fotos;
+    private ArrayList<Entrada> entradas;
     
     public Muro()
     {
-        mensajes = new ArrayList<>();
-        fotos = new ArrayList<>();
+        entradas = new ArrayList<>();
     }
     
-    public void addEntradaTexto(EntradaTexto entradaTexto)
+    public void addEntrada(Entrada entrada)
     {
-        mensajes.add(entradaTexto);
-    }
-    
-    public void addEntradaFoto(EntradaFoto entradaFoto)
-    {
-        fotos.add(entradaFoto);
+        entradas.add(entrada);
     }
     
     public String toString()
     {
         String cadenaADevolver = null;
         
-        for (EntradaTexto entrada : mensajes)
-        {
-            cadenaADevolver += entrada + "\n";
-        }
-        
-        for (EntradaFoto entrada : fotos)
+        for (Entrada entrada : entradas)
         {
             cadenaADevolver += entrada + "\n";
         }
