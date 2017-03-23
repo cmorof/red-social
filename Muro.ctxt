@@ -9,4 +9,6 @@ comment3.params=
 comment3.target=void\ mostrar()
 comment4.params=
 comment4.target=void\ verCantidadDatosPorEntrada()
-numComments=5
+comment5.params=tipoEntrada\ autor
+comment5.target=void\ mostrarDatosExclusivosEntradasFiltradas(java.lang.String,\ java.lang.String)
+numComments=6

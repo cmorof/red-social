@@ -39,4 +39,9 @@ public class EntradaFoto extends EntradaComentarios
     {
         return 5;
     }
+    
+    public void mostrarDatosExclusivos()
+    {
+        System.out.println("La imagen cuyo título es" + titulo + "y su dirección url" + urlImagen);
+    }
 }

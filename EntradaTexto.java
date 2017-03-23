@@ -36,4 +36,9 @@ public class EntradaTexto extends EntradaComentarios
     {
         return 5;
     }
+    
+    public void mostrarDatosExclusivos()
+    {
+        System.out.println("El mensaje es el siguiente:\n" + mensaje);
+    }
 }

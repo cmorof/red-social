@@ -38,4 +38,29 @@ public class Muro
             System.out.println(entrada.getCantidadDeDatosAsociadosALaEntrada());
         }
     }
+    
+    public void mostrarDatosExclusivosEntradasFiltradas(String tipoEntrada, String autor)
+    {        
+        for (Entrada entrada : entradas)
+        {
+            if (entrada.getClass().getSimpleName() == tipoEntrada && entrada.getUsuario() == autor)
+            {
+                if (entrada instanceof EntradaTexto)
+                {
+                    ((EntradaTexto)entrada).mostrarDatosExclusivos();
+                }
+                
+                if (entrada instanceof EntradaFoto)
+                {
+                    ((EntradaFoto)entrada).mostrarDatosExclusivos();
+                }
+                
+                if (entrada instanceof EntradaUnionAGrupo)
+                {
+                    ((EntradaUnionAGrupo)entrada).mostrarDatosExclusivos();
+                }
+            }
+            
+        }
+    }
 }

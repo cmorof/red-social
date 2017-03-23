@@ -32,4 +32,9 @@ public class EntradaUnionAGrupo extends Entrada
     {
         return 4;
     }
+    
+    public void mostrarDatosExclusivos()
+    {
+        System.out.println("Se ha unido al grupo" + grupo);
+    }
 }
