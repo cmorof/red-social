@@ -1,5 +1,6 @@
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.time.temporal.ChronoUnit;
 
 public class Entrada
 {
@@ -26,7 +27,23 @@ public class Entrada
     
     public String toString()
     {
-        return "";
+        String textoADevolver = "";
+        
+        textoADevolver += "Usuario: " + getUsuario() + "\n";
+        textoADevolver += getCantidadMeGusta() + "me gusta ";
+
+        long segundosQueHanPasadoDesdeCreacion = getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
+        long minutosQueHanPasadoDesdeCreacion = segundosQueHanPasadoDesdeCreacion / 60;
+        long segundosResiduales = segundosQueHanPasadoDesdeCreacion % 60;
+        
+        textoADevolver += "Hace ";
+        if (minutosQueHanPasadoDesdeCreacion > 0)
+        {
+            textoADevolver += minutosQueHanPasadoDesdeCreacion + "minutos";
+        }
+        textoADevolver += segundosResiduales + "segundos.\n";       
+        
+        return textoADevolver;
     }
     
     public String getUsuario()
@@ -34,13 +51,13 @@ public class Entrada
         return usuario;
     }
     
-    public int getcantidadMeGusta()
+    public int getCantidadMeGusta()
     {
         return cantidadMeGusta;
     }
     
-    public void mostrar()
+    public int getCantidadDeDatosAsociadosALaEntrada()
     {
-        
+        return 0;
     }
 }

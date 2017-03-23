@@ -30,4 +30,12 @@ public class Muro
     {
         System.out.println(this);
     }
+    
+    public void verCantidadDatosPorEntrada()
+    {
+        for  (Entrada entrada : entradas)
+        {
+            System.out.println(entrada.getCantidadDeDatosAsociadosALaEntrada());
+        }
+    }
 }

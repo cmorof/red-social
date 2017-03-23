@@ -8,5 +8,5 @@ comment2.target=java.lang.String\ getTituloDeLaImagen()
 comment3.params=
 comment3.target=java.lang.String\ toString()
 comment4.params=
-comment4.target=void\ mostrar()
+comment4.target=int\ getCantidadDeDatosAsociadosALaEntrada()
 numComments=5

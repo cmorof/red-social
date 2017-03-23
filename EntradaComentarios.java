@@ -10,13 +10,35 @@ public class EntradaComentarios extends Entrada
         comentarios = new ArrayList<String>();
     }
 
-        public ArrayList<String> getComentarios()
+    public ArrayList<String> getComentarios()
     {
         return comentarios;
     }
     
-        public void addComentario(String texto)
+    public void addComentario(String texto)
     {
         comentarios.add(texto);
+    }
+    
+    public String toString()
+    {
+        String textoADevolver = "";
+        
+        textoADevolver = super.toString();
+        
+        if (getComentarios().isEmpty())
+        {
+            textoADevolver += "La entrada no tiene comentarios";
+        }
+        else
+        {
+            textoADevolver += "Comentarios:\n";
+            for (String comentario : getComentarios())
+            {
+                textoADevolver += comentario + "\n";
+            }
+        }
+        
+        return textoADevolver;
     }
 }

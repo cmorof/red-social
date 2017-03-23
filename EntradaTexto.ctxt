@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=java.lang.String\ toString()
 comment3.params=
 comment3.target=void\ mostrar()
-numComments=4
+comment4.params=
+comment4.target=int\ getCantidadDeDatosAsociadosALaEntrada()
+numComments=5
