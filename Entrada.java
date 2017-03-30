@@ -29,19 +29,19 @@ public class Entrada
     {
         String textoADevolver = "";
         
-        textoADevolver += "Usuario: " + getUsuario() + "\n";
-        textoADevolver += getCantidadMeGusta() + "me gusta ";
+        textoADevolver += "<p class=\"primeralinea\">Usuario: " + getUsuario() + ", ";
+        textoADevolver += getCantidadMeGusta() + " me gusta, ";
 
         long segundosQueHanPasadoDesdeCreacion = getMomentoPublicacion().until(LocalDateTime.now(), ChronoUnit.SECONDS);
         long minutosQueHanPasadoDesdeCreacion = segundosQueHanPasadoDesdeCreacion / 60;
         long segundosResiduales = segundosQueHanPasadoDesdeCreacion % 60;
         
-        textoADevolver += "Hace ";
+        textoADevolver += " hace ";
         if (minutosQueHanPasadoDesdeCreacion > 0)
         {
-            textoADevolver += minutosQueHanPasadoDesdeCreacion + "minutos";
+            textoADevolver += minutosQueHanPasadoDesdeCreacion + " minutos ";
         }
-        textoADevolver += segundosResiduales + "segundos.\n";       
+        textoADevolver += segundosResiduales + " segundos.</p>";       
         
         return textoADevolver;
     }

@@ -1,4 +1,10 @@
 import java.util.ArrayList;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.io.BufferedWriter;
+import java.io.Writer;
+import java.nio.file.Files;
+import java.io.IOException;
 
 public class Muro
 {
@@ -61,6 +67,28 @@ public class Muro
                 }
             }
             
+        }
+    }
+    
+    public void mostrarMuroEnNavegador()
+    {
+        Path rutaArchivo = Paths.get("C:/Users/alumno/Desktop/Carlos/red-social/output.html");
+
+        try  
+        {
+            BufferedWriter archivo = Files.newBufferedWriter(rutaArchivo);
+            archivo.write("<html><head><link rel=stylesheet href=\"estilos.css\" type=\"text/css\"></head><h1>Entradas del muro</h1></head><body>");
+            for(int i = 0; i < entradas.size(); i++)
+            {                
+                archivo.write("<fieldset>");
+                archivo.write(entradas.get(i).toString());
+                archivo.write("</fieldset>");
+            }
+            archivo.write("</body></html>");
+            archivo.close();
+        }
+        catch (IOException excepcion) {
+            System.out.println(excepcion.toString());
         }
     }
 }

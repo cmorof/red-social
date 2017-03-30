@@ -22,7 +22,7 @@ public class EntradaTexto extends EntradaComentarios
         
         textoADevolver = super.toString();
         
-        textoADevolver += mensaje + "\n";
+        textoADevolver += "<p class=\"terceralinea\">" + mensaje + "</p>";
         
         return textoADevolver;
     }

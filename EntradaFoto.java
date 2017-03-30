@@ -1,5 +1,5 @@
 import java.time.LocalDateTime;
-    import java.time.temporal.ChronoUnit;
+import java.time.temporal.ChronoUnit;
 
 public class EntradaFoto extends EntradaComentarios
 {
@@ -9,7 +9,7 @@ public class EntradaFoto extends EntradaComentarios
     public EntradaFoto(String url, String titulo, String autor)
     {
         super(autor);
-        titulo = titulo;
+        this.titulo = titulo;
         urlImagen = url;
     }
     
@@ -29,8 +29,8 @@ public class EntradaFoto extends EntradaComentarios
         
         textoADevolver = super.toString();
         
-        textoADevolver += titulo + "\n";
-        textoADevolver += urlImagen + "\n";
+        textoADevolver += "<p class=\"terceralinea\">" + titulo + "</p>";
+        textoADevolver += "<p>" + urlImagen + "</p>";
         
         return textoADevolver;
     }

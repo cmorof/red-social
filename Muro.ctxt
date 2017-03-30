@@ -11,4 +11,6 @@ comment4.params=
 comment4.target=void\ verCantidadDatosPorEntrada()
 comment5.params=tipoEntrada\ autor
 comment5.target=void\ mostrarDatosExclusivosEntradasFiltradas(java.lang.String,\ java.lang.String)
-numComments=6
+comment6.params=
+comment6.target=void\ mostrarMuroEnNavegador()
+numComments=7

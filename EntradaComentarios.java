@@ -28,7 +28,7 @@ public class EntradaComentarios extends Entrada
         
         if (getComentarios().isEmpty())
         {
-            textoADevolver += "La entrada no tiene comentarios";
+            textoADevolver += "<p class=\"segundalinea\">La entrada no tiene comentarios</p>";
         }
         else
         {

@@ -17,7 +17,7 @@ public class EntradaUnionAGrupo extends Entrada
         
         textoADevolver += super.toString();
         
-        textoADevolver += "se ha unido al grupo " + grupo + "\n";
+        textoADevolver += "<p class=\"terceralinea\"> Se ha unido al grupo " + grupo + "</p>";
 
         
         return textoADevolver;
